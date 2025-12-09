@@ -1,8 +1,8 @@
 📄 Local GPT Assistant (RAG System)
 
-A lightweight Retrieval-Augmented Generation (RAG) application that answers questions strictly from uploaded documents.
+**A lightweight Retrieval-Augmented Generation (RAG) application that answers questions strictly from uploaded documents.**
 
-⭐ Overview
+**⭐ Overview**
 
 This project implements a local RAG-style assistant that allows users to upload documents and ask questions.
 The system retrieves relevant text chunks from the uploaded files and uses a lightweight local model to generate an answer.
@@ -14,8 +14,9 @@ This ensures zero hallucination, full transparency, and strict document-grounded
 
 AI Intern_Jr AI Developer_Asses…
 
-🧠 System Architecture (Approach)
-1. Document Upload & Processing
+
+**🧠 System Architecture (Approach)**
+**1. Document Upload & Processing**
 
 Supports: TXT, PDF, CSV, DOCX
 
@@ -31,7 +32,8 @@ chunk ID
 
 metadata
 
-2. Embedding & Vector Search
+**
+2. Embedding & Vector Search**
 
 Since the project must run locally without heavy dependencies or paid APIs, the system uses:
 
@@ -45,8 +47,9 @@ This mimics a classical RAG retrieval pipeline while staying lightweight.
 
 AI Intern_Jr AI Developer_Asses…
 
-3. Answer Generation
 
+**3. Answer Generation
+**
 Retrieved chunks are combined into a single context
 
 A free local LLM (google/flan-t5-small) generates the final answer
@@ -57,7 +60,8 @@ If similarity scores are too low → fallback to:
 
 “I don’t have enough information in the uploaded documents.”
 
-4. Simple Web Interface
+**
+4. Simple Web Interface**
 
 Built using Flask:
 
@@ -73,7 +77,7 @@ Exactly as required in the assignment’s UI section.
 
 AI Intern_Jr AI Developer_Asses…
 
-🔧 Tech Stack
+**🔧 Tech Stack**
 
 Following the assignment’s recommended technologies: 
 
@@ -86,7 +90,8 @@ Vector Search	TF-IDF + cosine similarity (scikit-learn)
 LLM	google/flan-t5-small (local, free)
 File Parsing	PyPDF2, python-docx, pandas
 Deployment	Vercel (serverless Python)
-📂 Example Input & Output
+
+**📂 Example Input & Output**
 User Uploads:
 
 resume.docx
@@ -109,7 +114,7 @@ If answer found → return it
 
 If not → return fallback
 
-Example Output:
+**Example Output:**
 
 "The minimum notice period mentioned in the provided policy document is 30 days."
 
@@ -121,7 +126,8 @@ If Out-of-Scope:
 
 AI Intern_Jr AI Developer_Asses…
 
-🚫 Out-of-Scope Handling
+
+**🚫 Out-of-Scope Handling**
 
 Per assignment rules:
 
@@ -135,7 +141,8 @@ AI Intern_Jr AI Developer_Asses…
 
 This eliminates hallucination completely.
 
-▶️ How to Run Locally
+
+**▶️ How to Run Locally**
 1. Install dependencies
 pip install -r requirements.txt
 
